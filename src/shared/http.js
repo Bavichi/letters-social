@@ -33,7 +33,7 @@ function generateFetchConfig(method, body = null) {
  */
 export function createPost(payload) {
     // Send the new post to the API
-    return fetch(`${process.env.ENDPOINT}/posts`, generateFetchConfig('POST', payload));
+    return fetch(`api/posts`, generateFetchConfig('POST', payload));
 }
 
 /**
@@ -54,7 +54,7 @@ export function fetchPosts(endpoint) {
  */
 export function fetchPost(id) {
     return fetch(
-        `${process.env.ENDPOINT}/posts/${id}?_embed=comments&_expand=user&_embed=likes`,
+        `api/posts/${id}?_embed=comments&_expand=user&_embed=likes`,
         generateFetchConfig('GET')
     );
 }
@@ -67,7 +67,7 @@ export function fetchPost(id) {
  */
 export function fetchCommentsForPost(postId) {
     return fetch(
-        `${process.env.ENDPOINT}/comments?postId=${postId}&_expand=user`,
+        `api/comments?postId=${postId}&_expand=user`,
         generateFetchConfig('GET')
     );
 }
@@ -80,7 +80,7 @@ export function fetchCommentsForPost(postId) {
  */
 export function createComment(payload) {
     // Send the new post to the API
-    return fetch(`${process.env.ENDPOINT}/comments`, generateFetchConfig('POST', payload));
+    return fetch(`api/comments`, generateFetchConfig('POST', payload));
 }
 
 /**
@@ -93,7 +93,7 @@ export function createComment(payload) {
 export function likePost(postId, userId) {
     // Create a new like for the user/post
     return fetch(
-        `${process.env.ENDPOINT}/posts/${postId}/likes/${userId}`,
+        `api/posts/${postId}/likes/${userId}`,
         generateFetchConfig('PUT', { postId, userId })
     );
 }
@@ -107,7 +107,7 @@ export function likePost(postId, userId) {
  */
 export function unlikePost(postId, userId) {
     return fetch(
-        `${process.env.ENDPOINT}/posts/${postId}/likes/${userId}`,
+        `api/posts/${postId}/likes/${userId}`,
         generateFetchConfig('DELETE')
     );
 }
@@ -119,7 +119,7 @@ export function unlikePost(postId, userId) {
  * @return {Response}     Fetch Response object
  */
 export function loadUser(id) {
-    return fetch(`${process.env.ENDPOINT}/users/${id}`, generateFetchConfig('GET'));
+    return fetch(`api/users/${id}`, generateFetchConfig('GET'));
 }
 
 /**
@@ -129,5 +129,5 @@ export function loadUser(id) {
  * @return {Response}     Fetch Response object
  */
 export function createUser(payload) {
-    return fetch(`${process.env.ENDPOINT}/users`, generateFetchConfig('POST', payload));
+    return fetch(`api/users`, generateFetchConfig('POST', payload));
 }
