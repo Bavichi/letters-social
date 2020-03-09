@@ -54,14 +54,14 @@ renderApp(initialState);
 
 history.listen(location => {
     const user = Firebase.auth().currentUser;
-    const newState = Object.assign(initialState, { location: user ? location.pathname : '/login' });
+    const newState = Object.assign(initialState, { location:location.pathname});
     renderApp(newState);
 });
 
 getFirebaseUser()
     .then(async user => {
         if (!user) {
-            return history.push('/login');
+            return history.push('/');
         }
         store.dispatch(loading());
         const token = await getFirebaseToken();
