@@ -1,0 +1,8 @@
+{
+    "verbose": false,
+    "env": {
+        "PORT": 3100,
+        "ENDPOINT": "http://0.0.0.0:3500"
+    },
+    "ignore": ["db/**/*.json"]
+}
