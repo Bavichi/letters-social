@@ -29,7 +29,7 @@ export class SinglePost extends Component {
     render() {
         return this.props.post ? (
             <div className="single-post">
-                <Link to="/">
+                <Link to="/Home">
                     <div className="back">
                         <i className="fa fa-arrow-left" /> Back
                     </div>
