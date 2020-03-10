@@ -18,6 +18,7 @@ import Welcome from './components/welcome/Welcome';
  * @method App
  * @module letters/components
  */
+
 class App extends Component {
     constructor(props) {
         super(props);
