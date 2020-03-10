@@ -20,7 +20,8 @@ module.exports = {
         inline: true,
         historyApiFallback: true,
         compress: true,
-        port: 3000,
+        port: 7000,
+        host:'0.0.0.0',
         overlay: true
     },
     devtool: 'source-map',
@@ -29,7 +30,7 @@ module.exports = {
     target: 'web',
     output: {
         path: `${__dirname}/lib`,
-        publicPath: 'http://localhost:3000/',
+        publicPath: '/',
         filename: 'bundle.js'
     },
     plugins: [
