@@ -51,7 +51,7 @@ class App extends Component {
                     const links = parseLinkHeader(res.headers.get('Link'));
                     this.setState(() => ({
                         posts: orderBy(this.state.posts.concat(posts), 'date', 'desc'),
-                        endpoint: links.next.url.slice(19),
+                        endpoint: 'api/'+ links.next.url.slice(19),
                     }));
                 });
             })
