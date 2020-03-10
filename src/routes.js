@@ -62,6 +62,8 @@ async function requireUser(nextState, replace, callback) {
  * Routes configuration
  * @module letters/components
  */
+
+ /* With Firebase
 export const routes = (
     <Route path="/" component={App}>
         <IndexRoute component={Home} onEnter={requireUser} />
@@ -69,4 +71,14 @@ export const routes = (
         <Route path="/login" component={Login} />
         <Route path="*" component={NotFound} />
     </Route>
-);
+);*/
+
+/* Without Firebase */
+export const routes = (
+    <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="/posts/:postId" component={SinglePost} />
+        <Route path="/login" component={Login} />
+        <Route path="*" component={NotFound} />
+    </Route>
+)

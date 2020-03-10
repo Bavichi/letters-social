@@ -15,7 +15,6 @@ describe('initialState', () => {
                 prev: null,
                 last: null
             },
-
             /*
             user: {
                 authenticated: false,

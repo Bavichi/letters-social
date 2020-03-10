@@ -21,13 +21,13 @@ class App extends Component {
         }
     }
     render() {
-        if (this.props.error) {
+        /*if (this.props.error) {
             return (
                 <div className="app">
                     <ErrorMessage error={this.props.error} />
                 </div>
             );
-        }
+        }*/
         return (
             <div className="app">
                 <Nav />
