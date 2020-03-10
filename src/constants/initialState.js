@@ -17,12 +17,9 @@ export default {
     },
     user: {
         authenticated: true,
-        /*profilePicture: null,
+        profilePicture: null,
         id: null,
         name: null,
-        token: null*/
-        id:"7d7bab7c-e98b-412e-9b20-2b6278427aa6",
-        name:"Gallandro",
-        profilePicture:"/static/assets/users/14.jpeg"
+        token: null
     }
 };
