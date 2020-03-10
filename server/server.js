@@ -14,10 +14,10 @@ import * as firebase from 'firebase-admin';
 import config from 'config';
 
 // Initialize Firebase
-firebase.initializeApp({
+/*firebase.initializeApp({
     credential: firebase.credential.cert(JSON.parse(process.env.LETTERS_FIREBASE_ADMIN_KEY)),
     databaseURL: 'https://letters-social.firebaseio.com'
-});
+});*/
 
 // Our dummy database backend
 import DB from '../db/DB';
