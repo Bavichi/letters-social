@@ -21,7 +21,8 @@ class App extends Component {
         }
     }
     render() {
-        /*if (this.props.error) {
+        /* With Firebase
+        if (this.props.error) {
             return (
                 <div className="app">
                     <ErrorMessage error={this.props.error} />
