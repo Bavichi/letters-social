@@ -5,8 +5,8 @@ import { history } from './history';
 import Route from './components/router/Route';
 import Router from './components/router/Router';
 import App from './app';
-import Home from './pages/home';
-import SinglePost from './pages/post';
+import Home from './pages/Home';
+import SinglePost from './pages/Post';
 import NotFound from './pages/404';
 
 import './shared/crash';
