@@ -23,7 +23,7 @@ export function pagination(state = initialState.pagination, action) {
                     if (process.env.NODE_ENV === 'production') {
                         nextState[k] = action.links[k].url.replace(/http:\/\//, 'https://');
                     } else {
-                        nextState[k] = action.links[k].url;
+                        nextState[k] = 'api/'+action.links[k].url;
                     }
                 }
             }
