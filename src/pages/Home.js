@@ -38,7 +38,6 @@ export class Home extends Component {
             });
     }
     createNewPost(post) {
-        post.userId = this.props.user.id;
         return API.createPost(post)
             .then(res => res.json())
             .then(newPost => {

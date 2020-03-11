@@ -38,6 +38,7 @@ class App extends Component {
         }
         return (
             <div className="app">
+                <Nav />
                 {/*<Nav user={this.props.user} />*/}
                 {this.state.loading ? (
                     <div className="loading">
