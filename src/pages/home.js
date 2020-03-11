@@ -30,8 +30,7 @@ export class Home extends Component {
                     const links = parseLinkHeader(res.headers.get('Link'));
                     this.setState(() => ({
                         posts: orderBy(this.state.posts.concat(posts), 'date', 'desc'),
-                        endpoint: links.next.url.slice(19),
-                        loading: false
+                        endpoint: 'api/' + links.next.url.slice(19)
                     }));
                 });
             })
@@ -40,7 +39,6 @@ export class Home extends Component {
             });
     }
     createNewPost(post) {
-        post.userId = this.props.user.id;
         return API.createPost(post)
             .then(res => res.json())
             .then(newPost => {
